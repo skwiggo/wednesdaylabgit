@@ -83,8 +83,9 @@
 	      this.appendText(li, city.name, "Name: ");
 	      this.appendText(li, city.country, "Country: ");
 	      this.appendText(li, city.population, "Population ");
+	      container.appendChild(li);
 	    }
-	    container.appendChild(li);
+	    
 	  }
 	
 	}
