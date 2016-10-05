@@ -75,6 +75,13 @@
 	    element.appendChild(pTag);
 	  },
 	
+	  appendImg: function(element, url){
+	    var img = document.createElement('img');
+	    img.src = url;
+	    img.width = "500";
+	    element.appendChild(img);
+	  },
+	
 	  render: function(cities){
 	    var container = document.getElementById("cities");
 	
@@ -83,11 +90,10 @@
 	      this.appendText(li, city.name, "Name: ");
 	      this.appendText(li, city.country, "Country: ");
 	      this.appendText(li, city.population, "Population ");
+	      this.appendImg(li, city.image);
 	      container.appendChild(li);
 	    }
-	    
 	  }
-	
 	}
 	
 	module.exports = UI;
@@ -103,19 +109,22 @@
 	  var city1 = new City({
 	    name: "Barcelona",
 	    country: "Spain",
-	    population: "5,375,774"
+	    population: "5,375,774",
+	    image: "https://media.timeout.com/images/101851347/image.jpg"
 	  });
 	
 	  var city2 = new City({
 	    name: "Vancouver",
 	    country: "Canada",
-	    population: "2,313,328"
+	    population: "2,313,328",
+	    image: "http://the-peak.ca/wp-content/uploads/2015/04/vancouver_skyline_281-1.jpg"
 	  });
 	
 	  var city3 = new City({
 	    name: "Gaborone",
 	    country: "Botswana",
-	    population: "421,907"
+	    population: "421,907",
+	    image: "http://www.botswanasafaripackages.com/img/gaborone-botswana.jpg"
 	  });
 	
 	  return [city1, city2, city3];
@@ -132,6 +141,7 @@
 	  this.name = options.name;
 	  this.country = options.country;
 	  this.population = options.population;
+	  this.image = options.image;
 	}
 	
 	module.exports = City;

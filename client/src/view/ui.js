@@ -17,6 +17,13 @@ UI.prototype = {
     element.appendChild(pTag);
   },
 
+  appendImg: function(element, url){
+    var img = document.createElement('img');
+    img.src = url;
+    img.width = "500";
+    element.appendChild(img);
+  },
+
   render: function(cities){
     var container = document.getElementById("cities");
 
@@ -25,11 +32,10 @@ UI.prototype = {
       this.appendText(li, city.name, "Name: ");
       this.appendText(li, city.country, "Country: ");
       this.appendText(li, city.population, "Population ");
+      this.appendImg(li, city.image);
       container.appendChild(li);
     }
-    
   }
-
 }
 
 module.exports = UI;
