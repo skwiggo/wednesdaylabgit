@@ -24,5 +24,4 @@ var Cities = function(){
 
 }
 
-
 module.exports = Cities;
