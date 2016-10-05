@@ -1,4 +1,4 @@
-var CityApi = function(app) {
+var CitiesApi = function(app) {
 
   var cities = require("../client/src/models/cities");
   var City = require("../client/src/models/city");
@@ -21,4 +21,4 @@ var CityApi = function(app) {
 
 }
 
-module.exports = FilmApi;
+module.exports = CitiesApi;

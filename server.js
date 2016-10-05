@@ -4,7 +4,7 @@ var path = require('path');
 var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
-// put in api address
+var CitiesApi = require('./api/citiesapi')
 
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname + '/client/build/index.html'));
@@ -13,7 +13,7 @@ app.get('/', function(req, res){
 app.use(express.static('client/build'));
 
 var server = app.listen(3000, function(){
-  // add api variable
+  new CitiesApi(app);
   var host = server.address().address;
   var port = server.address().port;
 
