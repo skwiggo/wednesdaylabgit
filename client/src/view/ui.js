@@ -31,7 +31,7 @@ UI.prototype = {
       var li = document.createElement("li");
       this.appendText(li, city.name, "Name: ");
       this.appendText(li, city.country, "Country: ");
-      this.appendText(li, city.population, "Population ");
+      this.appendText(li, city.population, "Population: ");
       this.appendImg(li, city.image);
       container.appendChild(li);
     }
