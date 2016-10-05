@@ -20,7 +20,7 @@ var Cities = function(){
     population: "421,907"
   });
 
-  return [city1, city1, city3];
+  return [city1, city2, city3];
 
 }
 
