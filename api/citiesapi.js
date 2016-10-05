@@ -14,7 +14,7 @@ var CitiesApi = function(app) {
   });
 
   app.delete("/api/cities/:id", function(req, res) {
-    result.splice(req.params.id, 1);
+    result.splice(req.params.id, 0);
     res.json({data: result});
   });
 
